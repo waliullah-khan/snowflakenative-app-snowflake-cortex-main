@@ -3,10 +3,10 @@ from snowflake.core import Root # requires snowflake>=0.8.0
 from snowflake.snowpark.context import get_active_session
 
 MODELS = [
-    "mistral-large",
+    "mistral-large2",
     "snowflake-arctic",
-    "llama3-70b",
-    "llama3-8b",
+    "llama3.1-70b",
+    "reka_flash",
 ]
 
 def init_messages():
@@ -225,7 +225,7 @@ def create_prompt(user_question):
     return prompt
 
 def main():
-    st.title(f":movie_camera: Snowflake CineBot")
+    st.title(f":movie_camera: Wali's Personal IMDB")
 
     init_service_metadata()
     init_config_options()
